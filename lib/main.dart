@@ -16,7 +16,8 @@ void main() async {
 }
 
 Future<List> getCurrencies() async {
-  String apiUrl = 'https://api.coinmarketcap.com/v1/ticker/?limit=50';
+  String apiUrl =
+      'https://api.coinmarketcap.com/v1/ticker/?convert=GBP&limit=50';
   // Make a HTTP GET request to the CoinMarketCap API.
   // Await basically pauses execution until the get() function returns a Response
   http.Response response = await http.get(apiUrl);
@@ -98,8 +99,8 @@ class CryptoListWidget extends StatelessWidget {
     );
   }
 
-  Text _getSubtitleWidget(String priceUsd, String percentChange1h) {
-    return new Text('\$$priceUsd\n1 hour: $percentChange1h%');
+  Text _getSubtitleWidget(String priceGbp, String percentChange1h) {
+    return new Text('\£$priceGbp\n1 hour: $percentChange1h%');
   }
 
   ListTile _getListTile(Map currency, MaterialColor color) {
@@ -107,7 +108,7 @@ class CryptoListWidget extends StatelessWidget {
       leading: _getLeadingWidget(currency['name'], color),
       title: _getTitleWidget(currency['name']),
       subtitle: _getSubtitleWidget(
-          currency['price_usd'], currency['percent_change_1h']),
+          currency['price_gbp'], currency['percent_change_1h']),
       isThreeLine: true,
     );
   }
