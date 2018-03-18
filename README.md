@@ -1,8 +1,3 @@
 # crypto_list
 
-A new Flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+Based on [How to build a Cryptocurrency price list app using Flutter SDK](https://medium.freecodecamp.org/how-to-build-a-cryptocurrency-price-list-app-using-flutter-sdk-1c75998e1a581)
