@@ -45,7 +45,7 @@ class CryptoListWidget extends StatelessWidget {
   Widget _buildBody() {
     return new Container(
       // A top margin of 56.0. A left and right margin of 8.0. And a bottom margin of 0.0.
-      margin: const EdgeInsets.fromLTRB(8.0, 56.0, 8.0, 0.0),
+      margin: const EdgeInsets.fromLTRB(8.0, 46.0, 8.0, 0.0),
       child: new Column(
         // A column widget can have several widgets that are placed in a top down fashion
         children: <Widget>[_getAppTitleWidget(), _getListViewWidget()],
@@ -54,11 +54,13 @@ class CryptoListWidget extends StatelessWidget {
   }
 
   Widget _getAppTitleWidget() {
-    return new Text(
-      'Cryptocurrencies',
-      style: new TextStyle(
-          color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24.0),
-    );
+    return new Padding(
+        padding: new EdgeInsets.all(8.0),
+        child: new Text(
+          'Cryptocurrencies',
+          style: new TextStyle(
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18.0),
+        ));
   }
 
   Widget _getListViewWidget() {
